@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SETTING</key>
+	<string>func_nav_setting_normal</string>
+	<key>ZYQC</key>
+	<string>func_nav_fault_check_normal</string>
+	<key>YWCS</key>
+	<string>detail_service_test_normal</string>
+	<key>PZ</key>
+	<string>take_photo_normal</string>
+	<key>ZYBG</key>
+	<string>detail_res_change_up</string>
+	<key>WGWH</key>
+	<string>detail_serv_dept_up</string>
+	<key>YY</key>
+	<string>detail_pre_order_up</string>
+	<key>ZP</key>
+	<string>detail_change_order_up</string>
+	<key>CLHT</key>
+	<string>detail_materal_call_back_up</string>
+	<key>JGHS</key>
+	<string>detail_call_back_up</string>
+	<key>HJ</key>
+	<string>detail_call_up</string>
+	<key>TD</key>
+	<string>detail_fail_back_order_up</string>
+	<key>HD</key>
+	<string>detail_suc_back_order_up</string>
+	<key>SZ</key>
+	<string>func_nav_setting_normal</string>
+	<key>GHZD</key>
+	<string>func_nav_terminal_change_normal</string>
+	<key>ZYHC</key>
+	<string>func_nav_gis_normal</string>
+	<key>TQYB</key>
+	<string>func_nav_weather_normal</string>
+	<key>GDLQ</key>
+	<string>func_nav_work_order_receive_normal</string>
+	<key>ZDLY</key>
+	<string>func_nav_scan_normal</string>
+	<key>ZSK</key>
+	<string>func_nav_knowledge_base_normal</string>
+	<key>GG</key>
+	<string>func_nav_notice_normal</string>
+	<key>ZYWH</key>
+	<string>func_nav_resource_maintain_normal</string>
+	<key>TJBB</key>
+	<string>func_nav_statistics_report_normal</string>
+	<key>GDCX</key>
+	<string>func_nav_work_order_query_normal</string>
+	<key>LCCX</key>
+	<string>func_nav_process_query_normal</string>
+	<key>ZYCX</key>
+	<string>func_nav_optical_splitter_normal</string>
+	<key>GDLB</key>
+	<string>func_nav_work_order_handle_normal</string>
+</dict>
+</plist>

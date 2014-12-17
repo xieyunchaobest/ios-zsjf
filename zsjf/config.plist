@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>projectTag</key>
+	<string>StandingBook</string>
+	<key>deviceToken</key>
+	<string>9cb9027aa6bc28c2e6d26d72f6a9ade6524ef4730ef0aff8c86941c11d88191c</string>
+	<key>woFetchFirst</key>
+	<string>YES</string>
+	<key>metarilFillBackFirst</key>
+	<string>YES</string>
+	<key>woDetailFirst</key>
+	<string>YES</string>
+	<key>isFirstRun</key>
+	<true/>
+	<key>password</key>
+	<string></string>
+	<key>userName</key>
+	<string></string>
+	<key>autoLogin</key>
+	<false/>
+	<key>rememberPwd</key>
+	<false/>
+</dict>
+</plist>

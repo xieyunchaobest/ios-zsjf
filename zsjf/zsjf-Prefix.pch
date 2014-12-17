@@ -1,0 +1,41 @@
+//
+// Prefix header for all source files of the 'mos' target in the 'mos' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h> 
+    //根据高度判断是否为IPHONE5设备 Added By Zhangyu 2013-07-29
+    #define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
+    
+    #define kReschangeMethod @"reschangeMethod"
+    #define kSevDeptMethod @"sevDeptMethod"
+    #define kGisdealMethod @"gisdealMethod"
+    //预约
+    #define kReservingTimeMethod @"reservingTimeMethod"
+    //转派
+    #define KChangeWorkOrderMethod @"changeWorkOrderMethod"
+    //材料回填
+    #define kMetarilFillBackMethod @"metarilFillBackMethod"
+    //资源变更
+    #define kReschangeMethod @"reschangeMethod"
+    //拍照
+    #define kTakePhoteMethod @"takePhoteMethod"
+    //业务测试
+    #define kYwcsMethod @"ywcsMethod"
+    //退单
+    #define kFailReturnMethod @"failReturnMethod"
+    //回单
+    #define kSuccessReturnMethod @"successReturnMethod"
+    //呼叫
+    #define kPhoneCallMethod @"phoneCallMethod"
+    //竣工核实
+    #define kReturnVisitMethod @"returnVisitMethod"
+
+#endif

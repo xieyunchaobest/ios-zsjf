@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SETTING</key>
+	<string>goToAboutUs:</string>
+	<key>ZYQC</key>
+	<string>unknowMethod:</string>
+	<key>YWCS</key>
+	<string>unknowMethod:</string>
+	<key>PZ</key>
+	<string>takePhote:</string>
+	<key>ZYBG</key>
+	<string>reschange:</string>
+	<key>WGWH</key>
+	<string>sevDept:</string>
+	<key>YY</key>
+	<string>reservingTimeMethod:</string>
+	<key>ZP</key>
+	<string>changeWorkOrderMethod:</string>
+	<key>CLHT</key>
+	<string>metarilFillBack:</string>
+	<key>JGHS</key>
+	<string>returnVisit:</string>
+	<key>HJ</key>
+	<string>phoneCall:</string>
+	<key>TD</key>
+	<string>failReturn:</string>
+	<key>HD</key>
+	<string>successReturn:</string>
+	<key>SZ</key>
+	<string>goToAboutUs:</string>
+	<key>GHZD</key>
+	<string>goToTermailChange:</string>
+	<key>ZYHC</key>
+	<string>goToGisLocationMain:</string>
+	<key>TQYB</key>
+	<string>goToGetWeather:</string>
+	<key>GDLQ</key>
+	<string>gotoWoFetch:</string>
+	<key>ZDLY</key>
+	<string>goToScanBar:</string>
+	<key>ZSK</key>
+	<string>goToKnowledge:</string>
+	<key>GG</key>
+	<string>goToNotice:</string>
+	<key>ZYWH</key>
+	<string>goToResMaintaining:</string>
+	<key>TJBB</key>
+	<string>goToStatisticalForm:</string>
+	<key>GDCX</key>
+	<string>goToWoQuery:</string>
+	<key>LCCX</key>
+	<string>goToProcessQuery:</string>
+	<key>ZYCX</key>
+	<string>goToResQuery:</string>
+	<key>GDLB</key>
+	<string>goToAllTaskList:</string>
+</dict>
+</plist>
