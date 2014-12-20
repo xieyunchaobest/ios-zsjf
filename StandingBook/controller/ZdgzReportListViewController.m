@@ -19,6 +19,7 @@
 #import "JTRB4HYBYWFZRBViewController.h"
 #import "QDRB4GWDYWFZRBViewController.h"
 #import "QDRB4QdwgzdywrbViewController.h"
+#import "Xyrb4SqwgzdywViewController.h"
 
 
 @interface ZdgzReportListViewController ()

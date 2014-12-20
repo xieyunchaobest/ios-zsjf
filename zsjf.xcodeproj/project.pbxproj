@@ -78,6 +78,8 @@
 		2865A9DF183B9D0400CB5865 /* HSRB4KDYWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2865A9DD183B9D0400CB5865 /* HSRB4KDYWViewController.xib */; };
 		2873A07716BE0D5F00727A1B /* checkbox-choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 2873A07516BE0D5F00727A1B /* checkbox-choose.png */; };
 		2873A07816BE0D5F00727A1B /* checkbox-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2873A07616BE0D5F00727A1B /* checkbox-normal.png */; };
+		287C10071A458C0800DE111B /* Xyrb4SqwgzdywViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287C10051A458C0800DE111B /* Xyrb4SqwgzdywViewController.m */; };
+		287C10081A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287C10061A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib */; };
 		28818168183519DA00482C22 /* G2YWRBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28818165183519DA00482C22 /* G2YWRBViewController.xib */; };
 		28818169183519DA00482C22 /* G2YWRBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28818166183519DA00482C22 /* G2YWRBViewController.m */; };
 		28844411182BD11B00561DA5 /* home_help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2884440C182BD11B00561DA5 /* home_help@2x.png */; };
@@ -446,6 +448,9 @@
 		2865A9DD183B9D0400CB5865 /* HSRB4KDYWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSRB4KDYWViewController.xib; sourceTree = "<group>"; };
 		2873A07516BE0D5F00727A1B /* checkbox-choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-choose.png"; path = "images/checkbox-choose.png"; sourceTree = "<group>"; };
 		2873A07616BE0D5F00727A1B /* checkbox-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkbox-normal.png"; path = "images/checkbox-normal.png"; sourceTree = "<group>"; };
+		287C10041A458C0800DE111B /* Xyrb4SqwgzdywViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xyrb4SqwgzdywViewController.h; sourceTree = "<group>"; };
+		287C10051A458C0800DE111B /* Xyrb4SqwgzdywViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xyrb4SqwgzdywViewController.m; sourceTree = "<group>"; };
+		287C10061A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Xyrb4SqwgzdywViewController.xib; sourceTree = "<group>"; };
 		28818165183519DA00482C22 /* G2YWRBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G2YWRBViewController.xib; sourceTree = "<group>"; };
 		28818166183519DA00482C22 /* G2YWRBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G2YWRBViewController.m; sourceTree = "<group>"; };
 		28818167183519DA00482C22 /* G2YWRBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G2YWRBViewController.h; sourceTree = "<group>"; };
@@ -1171,6 +1176,9 @@
 				2891B69D183D1058007119B5 /* HSRB4zdywlzViewController.m */,
 				2891B69E183D1058007119B5 /* HSRB4zdywlzViewController.xib */,
 				289DC8E61838732900523A8A /* HSRB43GYWViewController.h */,
+				287C10041A458C0800DE111B /* Xyrb4SqwgzdywViewController.h */,
+				287C10051A458C0800DE111B /* Xyrb4SqwgzdywViewController.m */,
+				287C10061A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib */,
 				289DC8E71838732900523A8A /* HSRB43GYWViewController.m */,
 				289DC8E81838732900523A8A /* HSRB43GYWViewController.xib */,
 				28F52E01183E4F1A0055253D /* HSRB4khjllzlzViewController.h */,
@@ -1536,6 +1544,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Cattsoft;
+				TargetAttributes = {
+					28F37AB116B2208F007340FE = {
+						DevelopmentTeam = 2XMB7Q3738;
+					};
+				};
 			};
 			buildConfigurationList = 28F37AAC16B2208E007340FE /* Build configuration list for PBXProject "zsjf" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1649,6 +1662,7 @@
 				09F6F725179FEC010004C6C7 /* scanningbg@2x.png in Resources */,
 				2AE3B9ED179FECEE00C6F81D /* arrows_bottom_right@2x.png in Resources */,
 				2AE3B9EF179FEE2D00C6F81D /* arrows_bottom_left@2x.png in Resources */,
+				287C10081A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib in Resources */,
 				2889923618E0734200BEFE3D /* tool_bar_jianshe_b.png in Resources */,
 				2AE3B9F3179FEEA200C6F81D /* arrows_top_left@2x.png in Resources */,
 				2AE3B9F5179FEF3A00C6F81D /* arrows_top_right@2x.png in Resources */,
@@ -1895,6 +1909,7 @@
 				28B04671185463DC0090DB69 /* FuncNodeSVO.m in Sources */,
 				284E7880185D5C4900DB0F5E /* ViewUtil.m in Sources */,
 				284E7883185D65B700DB0F5E /* BaseViewController.m in Sources */,
+				287C10071A458C0800DE111B /* Xyrb4SqwgzdywViewController.m in Sources */,
 				282E3F501865CF1000F1866C /* EditPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1923,8 +1938,8 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1938,8 +1953,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PROVISIONING_PROFILE = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
+				PROVISIONING_PROFILE = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1954,8 +1969,8 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1963,8 +1978,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
+				PROVISIONING_PROFILE = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1974,13 +1989,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zsjf/zsjf-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "\"${SDK_DIR}\"/usr/include/libxml2";
 				INFOPLIST_FILE = "zsjf/zsjf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/zsjf/ZBarSDK\"",
@@ -1993,8 +2008,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zsjf;
-				PROVISIONING_PROFILE = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "armv7 armv6";
@@ -2006,13 +2021,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YunChao Xie (2XMB7Q3738)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zsjf/zsjf-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "\"${SDK_DIR}\"/usr/include/libxml2";
 				INFOPLIST_FILE = "zsjf/zsjf-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/zsjf/ZBarSDK\"",
@@ -2025,8 +2040,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zsjf;
-				PROVISIONING_PROFILE = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5FBF919B-B730-4BE9-88A2-D3E1DCBD587E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "armv7 armv6";

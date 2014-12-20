@@ -20,6 +20,7 @@
 #import "QDRB4GWDYWFZRBViewController.h"
 #import "JTRB4WGJLZDGZViewController.h"
 #import "QDRB4QdwgzdywrbViewController.h"
+#import "Xyrb4SqwgzdywViewController.h"
 
 @implementation dayReportViewController
 
@@ -424,6 +425,10 @@
         [g2g3ywrbview release];
     }else if([reportName isEqualToString:@"渠道网格重点业务日报"]){
         QDRB4QdwgzdywrbViewController *g2g3ywrbview= [[QDRB4QdwgzdywrbViewController alloc] initWithNibName:@"QDRB4QdwgzdywrbViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"商企网格重点业务日报"]){
+        Xyrb4SqwgzdywViewController *g2g3ywrbview= [[Xyrb4SqwgzdywViewController alloc] initWithNibName:@"Xyrb4SqwgzdywViewController" bundle:nil];
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
     }

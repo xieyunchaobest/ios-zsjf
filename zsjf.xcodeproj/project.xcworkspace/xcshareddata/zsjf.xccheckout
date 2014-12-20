@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BBB2A351-21AB-428C-A9A2-E058A08C1F1E</string>
+	<string>AB33E223-B5A0-4A64-A926-54DC45FAB863</string>
 	<key>IDESourceControlProjectName</key>
 	<string>zsjf</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BF00306A-823A-49BF-837F-04A52F4DEFBB</key>
-		<string>https://github.com/xieyunchaobest/ZSJF.git</string>
+		<key>4BAD7EE2-9F61-4C10-BAFD-FE38E42F1D79</key>
+		<string>ssh://github.com/xieyunchaobest/ios-zsjf.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>zsjf/zsjf.xcodeproj/project.xcworkspace</string>
+	<string>zsjf.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BF00306A-823A-49BF-837F-04A52F4DEFBB</key>
-		<string>../../..</string>
+		<key>4BAD7EE2-9F61-4C10-BAFD-FE38E42F1D79</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/xieyunchaobest/ZSJF.git</string>
+	<string>ssh://github.com/xieyunchaobest/ios-zsjf.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BF00306A-823A-49BF-837F-04A52F4DEFBB</string>
+	<string>4BAD7EE2-9F61-4C10-BAFD-FE38E42F1D79</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BF00306A-823A-49BF-837F-04A52F4DEFBB</string>
+			<string>4BAD7EE2-9F61-4C10-BAFD-FE38E42F1D79</string>
 			<key>IDESourceControlWCCName</key>
-			<string>ZSJF</string>
+			<string>zsjf</string>
 		</dict>
 	</array>
 </dict>
