@@ -1,7 +1,7 @@
 //
 //  QDRB4QdwgzdywrbViewController.h
 //  zsjf
-//渠道日报 渠道网格重点业务日报
+//渠道日报 渠道客户经理日报
 //  Created by xieyunchao on 14-2-16.
 //  Copyright (c) 2014年 Cattsoft. All rights reserved.
 //

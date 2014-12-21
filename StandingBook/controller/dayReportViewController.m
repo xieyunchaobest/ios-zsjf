@@ -21,6 +21,8 @@
 #import "JTRB4WGJLZDGZViewController.h"
 #import "QDRB4QdwgzdywrbViewController.h"
 #import "Xyrb4SqwgzdywViewController.h"
+#import "Xyrb4XywgzdywViewController.h"
+#import "Qdrb4QdkhjlViewController.h"
 
 @implementation dayReportViewController
 
@@ -429,6 +431,14 @@
         [g2g3ywrbview release];
     }else if([reportName isEqualToString:@"商企网格重点业务日报"]){
         Xyrb4SqwgzdywViewController *g2g3ywrbview= [[Xyrb4SqwgzdywViewController alloc] initWithNibName:@"Xyrb4SqwgzdywViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"校园网格重点业务日报"]){
+        Xyrb4XywgzdywViewController *g2g3ywrbview= [[Xyrb4XywgzdywViewController alloc] initWithNibName:@"Xyrb4XywgzdywViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"渠道客户经理日报"]){
+        Qdrb4QdkhjlViewController *g2g3ywrbview= [[Qdrb4QdkhjlViewController alloc] initWithNibName:@"Qdrb4QdkhjlViewController" bundle:nil];
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
     }

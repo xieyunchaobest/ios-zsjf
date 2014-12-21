@@ -70,6 +70,11 @@
 		284E7883185D65B700DB0F5E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E7882185D65B700DB0F5E /* BaseViewController.m */; };
 		284F0CC6183BB22C008CE2F5 /* HSRB42g3grhViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F0CC4183BB22B008CE2F5 /* HSRB42g3grhViewController.m */; };
 		284F0CC7183BB22C008CE2F5 /* HSRB42g3grhViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284F0CC5183BB22B008CE2F5 /* HSRB42g3grhViewController.xib */; };
+		2854E9351A4679130065CDCE /* Xyrb4XywgzdywViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2854E9331A4679130065CDCE /* Xyrb4XywgzdywViewController.m */; };
+		2854E9361A4679130065CDCE /* Xyrb4XywgzdywViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2854E9341A4679130065CDCE /* Xyrb4XywgzdywViewController.xib */; };
+		2854E9451A46A2F60065CDCE /* Qdrb4QdkhjlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2854E9421A46A2F60065CDCE /* Qdrb4QdkhjlViewController.xib */; };
+		2854E9461A46A2F60065CDCE /* Qdrb4QdkhjlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2854E9431A46A2F60065CDCE /* Qdrb4QdkhjlViewController.m */; };
+		2854E9471A46A3750065CDCE /* Qdrb4QdkhjlViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2854E9441A46A2F60065CDCE /* Qdrb4QdkhjlViewController.h */; };
 		285D06FD16B8161B00AA4A59 /* btn_login_bg_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 285D06FB16B8161B00AA4A59 /* btn_login_bg_normal@2x.png */; };
 		285D06FE16B8161B00AA4A59 /* btn_login_bg_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 285D06FC16B8161B00AA4A59 /* btn_login_bg_press@2x.png */; };
 		285E080719068CED00BCFF7C /* YB4SRHBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 285E080519068CED00BCFF7C /* YB4SRHBViewController.m */; };
@@ -438,6 +443,12 @@
 		284F0CC3183BB22B008CE2F5 /* HSRB42g3grhViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSRB42g3grhViewController.h; sourceTree = "<group>"; };
 		284F0CC4183BB22B008CE2F5 /* HSRB42g3grhViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSRB42g3grhViewController.m; sourceTree = "<group>"; };
 		284F0CC5183BB22B008CE2F5 /* HSRB42g3grhViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSRB42g3grhViewController.xib; sourceTree = "<group>"; };
+		2854E9321A4679130065CDCE /* Xyrb4XywgzdywViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xyrb4XywgzdywViewController.h; sourceTree = "<group>"; };
+		2854E9331A4679130065CDCE /* Xyrb4XywgzdywViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Xyrb4XywgzdywViewController.m; sourceTree = "<group>"; };
+		2854E9341A4679130065CDCE /* Xyrb4XywgzdywViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Xyrb4XywgzdywViewController.xib; sourceTree = "<group>"; };
+		2854E9421A46A2F60065CDCE /* Qdrb4QdkhjlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Qdrb4QdkhjlViewController.xib; sourceTree = "<group>"; };
+		2854E9431A46A2F60065CDCE /* Qdrb4QdkhjlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qdrb4QdkhjlViewController.m; sourceTree = "<group>"; };
+		2854E9441A46A2F60065CDCE /* Qdrb4QdkhjlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qdrb4QdkhjlViewController.h; sourceTree = "<group>"; };
 		285D06FB16B8161B00AA4A59 /* btn_login_bg_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_login_bg_normal@2x.png"; path = "images/btn_login_bg_normal@2x.png"; sourceTree = "<group>"; };
 		285D06FC16B8161B00AA4A59 /* btn_login_bg_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_login_bg_press@2x.png"; path = "images/btn_login_bg_press@2x.png"; sourceTree = "<group>"; };
 		285E080419068CED00BCFF7C /* YB4SRHBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YB4SRHBViewController.h; sourceTree = "<group>"; };
@@ -1176,6 +1187,9 @@
 				2891B69D183D1058007119B5 /* HSRB4zdywlzViewController.m */,
 				2891B69E183D1058007119B5 /* HSRB4zdywlzViewController.xib */,
 				289DC8E61838732900523A8A /* HSRB43GYWViewController.h */,
+				2854E9321A4679130065CDCE /* Xyrb4XywgzdywViewController.h */,
+				2854E9331A4679130065CDCE /* Xyrb4XywgzdywViewController.m */,
+				2854E9341A4679130065CDCE /* Xyrb4XywgzdywViewController.xib */,
 				287C10041A458C0800DE111B /* Xyrb4SqwgzdywViewController.h */,
 				287C10051A458C0800DE111B /* Xyrb4SqwgzdywViewController.m */,
 				287C10061A458C0800DE111B /* Xyrb4SqwgzdywViewController.xib */,
@@ -1184,6 +1198,9 @@
 				28F52E01183E4F1A0055253D /* HSRB4khjllzlzViewController.h */,
 				28F52E02183E4F1A0055253D /* HSRB4khjllzlzViewController.m */,
 				28F52E03183E4F1A0055253D /* HSRB4khjllzlzViewController.xib */,
+				2854E9421A46A2F60065CDCE /* Qdrb4QdkhjlViewController.xib */,
+				2854E9431A46A2F60065CDCE /* Qdrb4QdkhjlViewController.m */,
+				2854E9441A46A2F60065CDCE /* Qdrb4QdkhjlViewController.h */,
 				28D72ED41840980E0002792F /* JTRB4QSYWFZRB.h */,
 				28D72ED51840980F0002792F /* JTRB4QSYWFZRB.m */,
 				28D72ED61840980F0002792F /* JTRB4QSYWFZRB.xib */,
@@ -1644,6 +1661,7 @@
 				28EDF094170AE13A00B1F292 /* checkbox-normal@2x.png in Resources */,
 				3AC8EADF1753372700C9157C /* gis_collect.png in Resources */,
 				DEBA1173175C6A0C00074C06 /* reservation_remark_text.png in Resources */,
+				2854E9451A46A2F60065CDCE /* Qdrb4QdkhjlViewController.xib in Resources */,
 				DEBA1175175C6AD500074C06 /* reservation_date.png in Resources */,
 				09E3AFE4175DE73300394ABC /* take_photo_normal@2x.png in Resources */,
 				09E3AFE5175DE73300394ABC /* take_photo_pressed@2x.png in Resources */,
@@ -1749,6 +1767,7 @@
 				28844417182BE0CF00561DA5 /* day_bg_common@2x.png in Resources */,
 				282CA594182D428F00193AC9 /* ReportTableViewController.xib in Resources */,
 				28F6F03D18C8B96A00BEBF11 /* btn_home_rtb.png in Resources */,
+				2854E9361A4679130065CDCE /* Xyrb4XywgzdywViewController.xib in Resources */,
 				280403AD1830F83500523936 /* zdyw_day_report_switch_title@2x.png in Resources */,
 				2889923018E0637000BEFE3D /* GcjgtjCell.xib in Resources */,
 				280403B11831227F00523936 /* day_report_switch_current@2x.png in Resources */,
@@ -1804,6 +1823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2854E9471A46A3750065CDCE /* Qdrb4QdkhjlViewController.h in Sources */,
 				2800454418B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.h in Sources */,
 				2800454518B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.m in Sources */,
 				2800454618B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.xib in Sources */,
@@ -1821,6 +1841,7 @@
 				7EAAEB3A16F233540053DFB3 /* MBProgressHUD.m in Sources */,
 				3A3406B116F8039F00F51DCC /* ASIAuthenticationDialog.m in Sources */,
 				3A3406B216F8039F00F51DCC /* ASIDataCompressor.m in Sources */,
+				2854E9351A4679130065CDCE /* Xyrb4XywgzdywViewController.m in Sources */,
 				280404E5190963F900EC897D /* YB4SRHB4qxViewController.m in Sources */,
 				3A3406B316F8039F00F51DCC /* ASIDataDecompressor.m in Sources */,
 				3A3406B416F8039F00F51DCC /* ASIDownloadCache.m in Sources */,
@@ -1855,6 +1876,7 @@
 				2898A3DB18F2C1E1008C773D /* gcztCell.m in Sources */,
 				2A1AADB917BE46D3009AE9A4 /* TSPopoverTouchView.m in Sources */,
 				2A1AADBA17BE46D3009AE9A4 /* UIBarButtonItem+WEPopover.m in Sources */,
+				2854E9461A46A2F60065CDCE /* Qdrb4QdkhjlViewController.m in Sources */,
 				2A1AADC317BE4928009AE9A4 /* SSettingViewController.m in Sources */,
 				856800AD17C5E1C10048A7AE /* CacheDicViewController.m in Sources */,
 				85A7D1C217CB696F00BA61BE /* DateSelectViewController.m in Sources */,
