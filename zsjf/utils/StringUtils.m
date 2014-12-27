@@ -88,8 +88,8 @@
     //本机
 // return [NSString stringWithFormat:@"http://192.168.1.106:8080/web_mos/%@",subUrl];
 //    return [NSString stringWithFormat:@"http://10.21.3.64:8080/web_mos/%@",subUrl];
-    return [NSString stringWithFormat:@"http://192.168.1.101:8080/web_mos/%@",subUrl];
-  //  return [NSString stringWithFormat:@"http://60.31.254.52:8080/web_mos/%@",subUrl];
+      return [NSString stringWithFormat:@"http://192.168.1.101:8080/web_mos/%@",subUrl];
+    //return [NSString stringWithFormat:@"http://60.31.254.52:8080/web_mos/%@",subUrl];
     
 //    return [NSString stringWithFormat:@"http://10.21.3.64:8080/web_mos/%@",subUrl];
    //测试

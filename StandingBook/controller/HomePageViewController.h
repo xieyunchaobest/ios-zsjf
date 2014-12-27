@@ -14,7 +14,6 @@
 @interface HomePageViewController : BaseViewController{
     NSString *trackViewURL;
 
-
 }
 
 @property (retain, nonatomic) IBOutlet UIButton *btnSearch;

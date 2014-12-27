@@ -528,6 +528,7 @@
 		28B058F71871AA0100D99A5C /* home_yuetongbao_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_yuetongbao_new@2x.png"; sourceTree = "<group>"; };
 		28B058FE1871B3CA00D99A5C /* home_ritongbao_new_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ritongbao_new_2@2x.png"; sourceTree = "<group>"; };
 		28B059041871B7B700D99A5C /* home_help_new_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_help_new_2@2x.png"; sourceTree = "<group>"; };
+		28B154E11A4E676000F1D108 /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
 		28B6F933184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTRB4WGJLZDGZViewController.h; sourceTree = "<group>"; };
 		28B6F934184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTRB4WGJLZDGZViewController.m; sourceTree = "<group>"; };
 		28B6F935184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JTRB4WGJLZDGZViewController.xib; sourceTree = "<group>"; };
@@ -1059,6 +1060,7 @@
 		28F37AB516B2208F007340FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28B154E11A4E676000F1D108 /* GPUImage.framework */,
 				3AAE7A8A17438441003EA89D /* libiconv.dylib */,
 				3AAE7A8817438409003EA89D /* CoreVideo.framework */,
 				3AAE7A8617438401003EA89D /* CoreMedia.framework */,
@@ -2013,6 +2015,10 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zsjf/zsjf-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "\"${SDK_DIR}\"/usr/include/libxml2";
@@ -2031,7 +2037,7 @@
 				);
 				PRODUCT_NAME = zsjf;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "armv7 armv6";
@@ -2045,6 +2051,10 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zsjf/zsjf-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = "\"${SDK_DIR}\"/usr/include/libxml2";
@@ -2063,7 +2073,7 @@
 				);
 				PRODUCT_NAME = zsjf;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				VALID_ARCHS = "armv7 armv6";

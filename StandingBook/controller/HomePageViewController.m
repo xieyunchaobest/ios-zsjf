@@ -67,8 +67,35 @@
     [temporaryBarButtonItem release];
     [self getResponse];
     [self modifyPwdConfirm];
+    [self reqNotice];
     
 }
+
+-(void)reqNotice{
+    NSString* url=[[[NSString alloc] initWithString:@"tm/ZSJFAction.do?method=showNotice"] autorelease];
+    aSIHTTPRequestUtils = [[ASIHTTPRequestUtils alloc] initWithHandle:self];
+    NSMutableDictionary* requestQueryDirData = [[NSMutableDictionary alloc] init];
+    
+    [requestQueryDirData setObject:@"IOS" forKey:@"whichApp"];
+    [aSIHTTPRequestUtils requestData:url data:requestQueryDirData action:@selector(showNotice:) isShowProcessBar:NO];
+}
+
+-(void)showNotice:(id)data{
+    NSDictionary* noticeDic = [DataProcess getNSDictionaryFromNSData:data];
+    
+    NSString *noticeId=[noticeDic valueForKey:@"noticeId"];
+    if (noticeId==nil) {
+        return ;
+    }
+    NSString *title=[noticeDic valueForKey:@"title"];
+    NSString *content=[noticeDic valueForKey:@"content"];
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:title message:content delegate:self cancelButtonTitle:@"我知道了"
+                                           otherButtonTitles:nil, nil] autorelease];
+    alert.tag=300;
+    [alert show];
+   
+}
+
 
 //初次使用密码提示用户修改
 -(void)modifyPwdConfirm{
@@ -109,6 +136,7 @@
     }
     if (currentVersionInt<lastVersionInt) {
         UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"更新" message:versionDesc delegate:self cancelButtonTitle:@"关闭" otherButtonTitles:@"更新", nil] autorelease];
+        alert.tag=200;
         [alert show];
     }
 }
@@ -136,7 +164,7 @@
         }
          NSString *sysUserId=[DataProcess getSysUserExtendedMVO].sysUserSVO.sysUserId;
         [DataProcess addOrChangeConfig:@"Y" forKey:sysUserId];
-    }else{
+    }else if(alertView.tag==200){
         if(buttonIndex==1)
         {
             NSString *path = publishPath;
@@ -145,6 +173,8 @@
         }else if([isForce isEqualToString:@"Y"]){
             exit(0); // 退出整个程序
         }
+    }else{
+        
     }
     
     [alertView dismissWithClickedButtonIndex:0 animated:YES];
