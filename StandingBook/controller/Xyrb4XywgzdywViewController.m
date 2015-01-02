@@ -36,7 +36,7 @@
 
     col=5;
     tableviewy=84;
-    reportFlag=@"2gfzrb";//2g发展日报
+    reportFlag=@"2g";//2g发展日报
    
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"日期" style:UIBarButtonItemStylePlain target:self action:@selector(showDateSelectView)];
@@ -91,16 +91,16 @@
 
 -(void)initSwitchButton{
     [self.switch2fButton setTitle:@"普通2G" forState:UIControlStateNormal];
-    [self.swith3gButton setTitle:@"OCS2G" forState:UIControlStateNormal];
-    [self.swith4gButton setTitle:@"3G" forState:UIControlStateNormal];
-    [self.switchkdinstallButton setTitle:@"4G" forState:UIControlStateNormal];
-    [self.switchunistallButton setTitle:@"OCS3G" forState:UIControlStateNormal];
-    [self.switch2g2gButton setTitle:@"2G3G" forState:UIControlStateNormal];
+    [self.switchocs2gButton setTitle:@"OCS2G" forState:UIControlStateNormal];
+    [self.swith3gButton setTitle:@"3G" forState:UIControlStateNormal];
+    [self.switchocs3gButton setTitle:@"OCS3G" forState:UIControlStateNormal];
+    [self.switch2g2gButton setTitle:@"2G3G\n融合" forState:UIControlStateNormal];
+    [self.swith4gButton setTitle:@"4G" forState:UIControlStateNormal];
     [self setSwitchButtonStyle:self.switch2fButton];
     [self setSwitchButtonStyle:self.swith3gButton];
     [self setSwitchButtonStyle:self.swith4gButton];
-    [self setSwitchButtonStyle:self.switchkdinstallButton];
-    [self setSwitchButtonStyle:self.switchunistallButton];
+    [self setSwitchButtonStyle:self.switchocs2gButton];
+    [self setSwitchButtonStyle:self.switchocs3gButton];
     [self setSwitchButtonStyle:self.switch2g2gButton];
     
 
@@ -125,7 +125,7 @@
     //解析服务器返回数据
     if (responseData!=nil) {
          NSDictionary* list = [DataProcess getNSDictionaryFromNSData:responseData];
-        if(reportFlag==nil || [reportFlag isEqualToString:@"2gfzrb"] || [reportFlag isEqualToString:@"3gfzrb"] || [reportFlag isEqualToString:@"4gfzrb"] || [reportFlag isEqualToString:@"2g3gfz"]
+        if(reportFlag==nil || [reportFlag isEqualToString:@"2g"] || [reportFlag isEqualToString:@"3g"] || [reportFlag isEqualToString:@"4g"] || [reportFlag isEqualToString:@"2g3g"]
            ){
              [self initTableTitle42g3g];
         }else{
@@ -158,7 +158,7 @@
         NSDictionary* vo=sortedArr[i];
         NSMutableDictionary *data = [NSMutableDictionary dictionaryWithCapacity:0];
         for (NSString *key in trDict) {
-            if([reportFlag isEqualToString:@"2gfzrb"] || reportFlag==nil){
+            if([reportFlag isEqualToString:@"2g"] || reportFlag==nil){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -172,7 +172,7 @@
                     rfa=[vo objectForKey:@"pt2gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"3gfzrb"]){
+            }else if([reportFlag isEqualToString:@"ocs2g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -186,7 +186,7 @@
                     rfa=[vo objectForKey:@"ocs2gSyljjh"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"4gfzrb"]){
+            }else if([reportFlag isEqualToString:@"3g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -200,7 +200,7 @@
                     rfa=[vo objectForKey:@"pt3gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"kdfzrb"]){
+            }else if([reportFlag isEqualToString:@"4g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -214,7 +214,7 @@
                     rfa=[vo objectForKey:@"pt4gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"kdcjrb"]){
+            }else if([reportFlag isEqualToString:@"ocs3g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -228,7 +228,7 @@
                     rfa=[vo objectForKey:@"ocs3gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"2g3gfz"]){
+            }else if([reportFlag isEqualToString:@"2g3g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
@@ -273,18 +273,18 @@
         //如果有‘合计’项，则把合计剔除，然后按照 ‘当月累计’从高到低排序
         NSDictionary *d=arr[arr.count-1];
       
-        if (reportFlag==nil ||[@"2gfzrb" isEqualToString:reportFlag]) {
-            sortByCol=@"zdyw2gylj";
-        }else if([@"3gfzrb" isEqualToString:reportFlag]){
-              sortByCol=@"zdyw3gylj";
-        }else if([@"4gfzrb" isEqualToString:reportFlag]){
-            sortByCol=@"zdyw4gylj";
-        }else if([@"kdfzrb" isEqualToString:reportFlag]){
-              sortByCol=@"zdywKdylj";
-        }else if([@"kdcjrb" isEqualToString:reportFlag]){
-            sortByCol=@"zdywKdcjdylj";
-        }else if([@"2g3gfz" isEqualToString:reportFlag]){
-            sortByCol=@"zdyw2g3gylj";
+        if (reportFlag==nil ||[@"2g" isEqualToString:reportFlag]) {
+            sortByCol=@"pt2gDylj";
+        }else if([@"ocs2g" isEqualToString:reportFlag]){
+              sortByCol=@"ocs2gDyljsx";
+        }else if([@"3g" isEqualToString:reportFlag]){
+            sortByCol=@"pt3gRfz";
+        }else if([@"ocs3g" isEqualToString:reportFlag]){
+              sortByCol=@"ocs3gDylj";
+        }else if([@"2g3g" isEqualToString:reportFlag]){
+            sortByCol=@"rh2g3gDylj";
+        }else if([@"4g" isEqualToString:reportFlag]){
+            sortByCol=@"pt4gDgyl";
         }
         
         
@@ -293,7 +293,7 @@
         
         [amarr sortUsingDescriptors:sortDescriptors];
         
-     //   [amarr addObject:d];
+        //[amarr addObject:d];
         
         [descripor release];
         [sortDescriptors release];
@@ -376,36 +376,36 @@
 - (IBAction)showReport:(UIButton*)sender{
     [self setcurrentSwitchStyle:sender];
     if(sender.tag==0){
-        reportFlag=@"2gfzrb";
+        reportFlag=@"2g";
         col=5;
         tableviewy=84;
         [self initTableTitle42g3g];
     }else if(sender.tag==1){
-        reportFlag=@"3gfzrb";
+        reportFlag=@"ocs2g";
         col=5;
         tableviewy=84;
         [self initTableTitle4kdfz];
     }else if(sender.tag==2){
-        reportFlag=@"4gfzrb";
+        reportFlag=@"3g";
         col=5;
         tableviewy=84;
         [self initTableTitle42g3g];
+    }else if(sender.tag==3){
+        reportFlag=@"ocs3g";
+        col=5;
+        tableviewy=84;
+        [self initTableTitle42g3g];
+        
     }else if(sender.tag==4){
-        reportFlag=@"kdfzrb";
+        reportFlag=@"2g3g";
         col=5;
         tableviewy=96;
         [self initTableTitle42g3g];
     }else if(sender.tag==5){
-        reportFlag=@"kdcjrb";
+        reportFlag=@"4g";
         col=5;
         tableviewy=96;
         [self initTableTitle42g3g];
-    }else if(sender.tag==3){
-        reportFlag=@"2g3gfz";
-        col=5;
-        tableviewy=84;
-        [self initTableTitle42g3g];
-
     }
  [self doAfterinitData:nil];
     
@@ -564,12 +564,13 @@
     [aSIHTTPRequestUtils release];
     [reslist release];
     [_switch2fButton release];
+    [_switchocs2gButton release];
     [_swith3gButton release];
-    [_switchkdinstallButton release];
-    [_switchunistallButton release];
+    [_switchocs3gButton release];
+    [_switch2g2gButton release];
+    [_swith4gButton release];
     [_whickReportFlag release];
     [_fromPageFlag release];
-    [_swith4gButton release];
     [_scroll_view release];
     [super dealloc];
 }

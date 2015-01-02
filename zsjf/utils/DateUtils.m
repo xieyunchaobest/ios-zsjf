@@ -57,11 +57,11 @@
 }
 
 +(NSString*)getYesterdayStr{
-    NSDate *  senddate= [NSDate dateWithTimeIntervalSinceNow: -(24*60*60) ];
-    
+    NSDate *senddate= [NSDate dateWithTimeIntervalSinceNow: -(24*60*60) ];
+    NSLog(@"My custom date: %@", senddate);
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     
-    [dateformatter setDateFormat:@"YYYY-MM-dd"];
+    [dateformatter setDateFormat:@"yyyy-MM-dd"];
     
     NSString *  locationString=[dateformatter stringFromDate:senddate];
     

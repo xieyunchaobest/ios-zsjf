@@ -23,11 +23,13 @@
 
 - (IBAction)showReport:(UIButton*)sender;
 @property (retain, nonatomic) IBOutlet UIButton *switch2fButton;
+@property (retain, nonatomic) IBOutlet UIButton *switchocs2gButton;
 @property (retain, nonatomic) IBOutlet UIButton *swith3gButton;
-@property (retain, nonatomic) IBOutlet UIButton *swith4gButton;
+@property (retain, nonatomic) IBOutlet UIButton *switchocs3gButton;
+
 @property (retain, nonatomic) IBOutlet UIButton *switch2g2gButton;
-@property (retain, nonatomic) IBOutlet UIButton *switchkdinstallButton;
-@property (retain, nonatomic) IBOutlet UIButton *switchunistallButton;
+
+@property (retain, nonatomic) IBOutlet UIButton *swith4gButton;
 
 @property (retain, nonatomic) IBOutlet UIView *pickerView;
 @property (retain, nonatomic) IBOutlet UIDatePicker *myDatePicker;

@@ -582,7 +582,7 @@
     }else{
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSString *selectDate =  [dateFormatter stringFromDate:select];
-        [super setWrapTitle:@"网格重点业务日报" date:selectDate];
+        [super setWrapTitle:@"商企网格重点业务日报" date:selectDate];
         NSLog(@"selectDateselectDate%@",selectDate);
         //self.myDateLabel.text = selectDate;
         [self initData:selectDate];

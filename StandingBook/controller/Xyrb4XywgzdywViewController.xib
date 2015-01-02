@@ -11,11 +11,11 @@
                 <outlet property="pickerView" destination="263" id="269"/>
                 <outlet property="scroll_view" destination="1Cc-ks-fGQ" id="Uzy-lY-7lT"/>
                 <outlet property="switch2fButton" destination="8" id="254"/>
-                <outlet property="switch2g2gButton" destination="19" id="hqi-2d-aAB"/>
-                <outlet property="switchkdinstallButton" destination="CiV-v7-ahS" id="pR8-Ga-XCD"/>
-                <outlet property="switchunistallButton" destination="6AE-Hk-dtz" id="WP9-Fn-TfF"/>
-                <outlet property="swith3gButton" destination="11" id="255"/>
-                <outlet property="swith4gButton" destination="15" id="J5t-Vk-nHF"/>
+                <outlet property="switch2g2gButton" destination="CiV-v7-ahS" id="wLX-4d-oxr"/>
+                <outlet property="switchocs2gButton" destination="11" id="fVN-qz-43d"/>
+                <outlet property="switchocs3gButton" destination="19" id="s7Y-in-txF"/>
+                <outlet property="swith3gButton" destination="15" id="Wvl-7S-nrv"/>
+                <outlet property="swith4gButton" destination="6AE-Hk-dtz" id="mMr-w2-3PC"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -74,7 +74,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="showReport:" destination="-1" eventType="touchUpInside" id="240"/>
+                                <action selector="showReport:" destination="-1" eventType="touchUpInside" id="QgY-bU-4EV"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="19">
