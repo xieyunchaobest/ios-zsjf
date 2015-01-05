@@ -64,6 +64,9 @@
 		283C6378184B695F008349BB /* HSYB4KDYFZQKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283C6376184B695F008349BB /* HSYB4KDYFZQKViewController.xib */; };
 		283C637A184B7933008349BB /* welcome640.png in Resources */ = {isa = PBXBuildFile; fileRef = 283C6379184B7933008349BB /* welcome640.png */; };
 		283F29B318C4C6780094BBF7 /* login_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283F29B218C4C6780094BBF7 /* login_background@2x.png */; };
+		283F8BB01A5AD5BE00400120 /* HSRB44gywrbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283F8BAD1A5AD5BE00400120 /* HSRB44gywrbViewController.xib */; };
+		283F8BB11A5AD5BE00400120 /* HSRB44gywrbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283F8BAE1A5AD5BE00400120 /* HSRB44gywrbViewController.m */; };
+		283F8BB21A5AD6C800400120 /* HSRB44gywrbViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 283F8BAF1A5AD5BE00400120 /* HSRB44gywrbViewController.h */; };
 		284231A118CA262E00F43AB8 /* home_page_background_586@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 284231A018CA262E00F43AB8 /* home_page_background_586@2x.png */; };
 		284231A318CA293C00F43AB8 /* HomePageViewController_i5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284231A218CA293C00F43AB8 /* HomePageViewController_i5.xib */; };
 		284E7880185D5C4900DB0F5E /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 284E787F185D5C4900DB0F5E /* ViewUtil.m */; };
@@ -433,6 +436,9 @@
 		283C6376184B695F008349BB /* HSYB4KDYFZQKViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSYB4KDYFZQKViewController.xib; sourceTree = "<group>"; };
 		283C6379184B7933008349BB /* welcome640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome640.png; sourceTree = "<group>"; };
 		283F29B218C4C6780094BBF7 /* login_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_background@2x.png"; sourceTree = "<group>"; };
+		283F8BAD1A5AD5BE00400120 /* HSRB44gywrbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSRB44gywrbViewController.xib; sourceTree = "<group>"; };
+		283F8BAE1A5AD5BE00400120 /* HSRB44gywrbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSRB44gywrbViewController.m; sourceTree = "<group>"; };
+		283F8BAF1A5AD5BE00400120 /* HSRB44gywrbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSRB44gywrbViewController.h; sourceTree = "<group>"; };
 		284231A018CA262E00F43AB8 /* home_page_background_586@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home_page_background_586@2x.png"; path = "StandingBook/images/home_page_background_586@2x.png"; sourceTree = SOURCE_ROOT; };
 		284231A218CA293C00F43AB8 /* HomePageViewController_i5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController_i5.xib; sourceTree = "<group>"; };
 		284E787E185D5C4900DB0F5E /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
@@ -1238,6 +1244,9 @@
 				28D72F01184238420002792F /* HSYB4GJZB4GHViewController.h */,
 				28D72F02184238440002792F /* HSYB4GJZB4GHViewController.m */,
 				28D72F03184238460002792F /* HSYB4GJZB4GHViewController.xib */,
+				283F8BAD1A5AD5BE00400120 /* HSRB44gywrbViewController.xib */,
+				283F8BAE1A5AD5BE00400120 /* HSRB44gywrbViewController.m */,
+				283F8BAF1A5AD5BE00400120 /* HSRB44gywrbViewController.h */,
 				283C636F184B3993008349BB /* HSYB43GYWViewController.h */,
 				283C6370184B3993008349BB /* HSYB43GYWViewController.m */,
 				283C6371184B3993008349BB /* HSYB43GYWViewController.xib */,
@@ -1738,6 +1747,7 @@
 				93E741CC1821FECE005BD02F /* tool_bar_Photo_pressed@2x.png in Resources */,
 				284231A118CA262E00F43AB8 /* home_page_background_586@2x.png in Resources */,
 				93E741CE1821FF1F005BD02F /* tool_bar_Edit_normal@2x.png in Resources */,
+				283F8BB01A5AD5BE00400120 /* HSRB44gywrbViewController.xib in Resources */,
 				93E741D41821FF67005BD02F /* tool_bar_Edit_pressed@2x.png in Resources */,
 				93E741D51821FF67005BD02F /* tool_bar_Polling_pressed@2x.png in Resources */,
 				93E741D61821FF67005BD02F /* tool_bar_TwoCode_normal@2x.png in Resources */,
@@ -1824,6 +1834,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283F8BB21A5AD6C800400120 /* HSRB44gywrbViewController.h in Sources */,
 				2800454418B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.h in Sources */,
 				2800454518B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.m in Sources */,
 				2800454618B0D9FD008E1A5C /* QDRB4QdwgzdywrbViewController.xib in Sources */,
@@ -1911,6 +1922,7 @@
 				284F0CC6183BB22C008CE2F5 /* HSRB42g3grhViewController.m in Sources */,
 				2891B69F183D1058007119B5 /* HSRB4zdywlzViewController.m in Sources */,
 				2889922E18E0630A00BEFE3D /* GcjgtjCell.m in Sources */,
+				283F8BB11A5AD5BE00400120 /* HSRB44gywrbViewController.m in Sources */,
 				28F52E04183E4F1A0055253D /* HSRB4khjllzlzViewController.m in Sources */,
 				28D72ED71840980F0002792F /* JTRB4QSYWFZRB.m in Sources */,
 				28D72EDC1840EDE10002792F /* JTRB4HYBYWFZRBViewController.m in Sources */,

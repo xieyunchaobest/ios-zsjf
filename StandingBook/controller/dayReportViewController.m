@@ -23,6 +23,7 @@
 #import "Xyrb4SqwgzdywViewController.h"
 #import "Xyrb4XywgzdywViewController.h"
 #import "Qdrb4QdkhjlViewController.h"
+#import "HSRB44gywrbViewController.h"
 
 @implementation dayReportViewController
 
@@ -441,7 +442,13 @@
         Qdrb4QdkhjlViewController *g2g3ywrbview= [[Qdrb4QdkhjlViewController alloc] initWithNibName:@"Qdrb4QdkhjlViewController" bundle:nil];
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"4G业务日报"]){
+        HSRB44gywrbViewController *g2g3ywrbview= [[HSRB44gywrbViewController alloc] initWithNibName:@"HSRB44gywrbViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
     }
+    
+    
 
 }
 
