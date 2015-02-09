@@ -1971,7 +1971,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				COPY_PHASE_STRIP = NO;
@@ -1987,8 +1987,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PROVISIONING_PROFILE = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				PROVISIONING_PROFILE = "353e2641-4c62-4da6-8100-e587488f6272";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2002,7 +2002,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				COPY_PHASE_STRIP = YES;
@@ -2012,8 +2012,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6870a732-4ba1-4d10-adb5-d648b2ee24d8";
+				PROVISIONING_PROFILE = "353e2641-4c62-4da6-8100-e587488f6272";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2023,8 +2023,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2046,7 +2046,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zsjf;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "353e2641-4c62-4da6-8100-e587488f6272";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -2059,8 +2059,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: YunChao Xie (E9X3UGPVXU)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2082,7 +2082,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = zsjf;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "353e2641-4c62-4da6-8100-e587488f6272";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "353e2641-4c62-4da6-8100-e587488f6272";
 				SDKROOT = iphoneos7.1;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";

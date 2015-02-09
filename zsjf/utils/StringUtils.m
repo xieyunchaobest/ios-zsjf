@@ -87,8 +87,8 @@
     //return [NSString stringWithFormat:@"http://192.168.105.234:8080/web_mos/%@",subUrl];
     //本机
 // return [NSString stringWithFormat:@"http://192.168.1.106:8080/web_mos/%@",subUrl];
-//    return [NSString stringWithFormat:@"http://10.21.3.64:8080/web_mos/%@",subUrl];
-      return [NSString stringWithFormat:@"http://192.168.1.101:8080/web_mos/%@",subUrl];
+//    return [NSString stringWithFormat:@"http://10.21.3.64:8080/web_mos/%@",subUr  l];
+     return [NSString stringWithFormat:@"http://192.168.1.105:8080/web_mos/%@",subUrl];
     //return [NSString stringWithFormat:@"http://60.31.254.52:8080/web_mos/%@",subUrl];
     
 //    return [NSString stringWithFormat:@"http://10.21.3.64:8080/web_mos/%@",subUrl];
@@ -145,7 +145,7 @@
 
 /*
  *Desc:double数字四舍五入为字符串
- *param: src原数据 
+ *param: src原数据 s
  *       format要四舍五入的格式 例如:27.6 格式为@"0.##"可以舍为28
  *Added By zhangyuc 2013-03-28
  */

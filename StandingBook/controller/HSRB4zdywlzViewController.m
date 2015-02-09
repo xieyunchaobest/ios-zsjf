@@ -127,7 +127,7 @@
         
         [amarr sortUsingDescriptors:sortDescriptors];
         
-        [amarr addObject:d];
+        //[amarr addObject:d];
         
         [descripor release];
         [sortDescriptors release];

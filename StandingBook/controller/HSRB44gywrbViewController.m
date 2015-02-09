@@ -45,6 +45,8 @@
     [super setWrapTitle:@"4G业务日报" date:date];
     [_reqdic setObject:date forKey:@"date"];
     showwgFlag=YES;
+    [_reqdic setObject:@"全部" forKey:@"khq"];
+    [_reqdic setObject:@"全部" forKey:@"hylx"];
     [self initData:_reqdic];
     [self initToolBar4zsjf];
    
