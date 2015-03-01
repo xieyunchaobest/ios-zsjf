@@ -139,6 +139,8 @@
 		28B059051871B7B700D99A5C /* home_help_new_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28B059041871B7B700D99A5C /* home_help_new_2@2x.png */; };
 		28B6F936184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B6F934184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.m */; };
 		28B6F937184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B6F935184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.xib */; };
+		28B8CF071AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B8CF041AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.xib */; };
+		28B8CF081AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8CF051AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.m */; };
 		28C3C5391844DC0900817C07 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28C3C5381844DC0900817C07 /* Default@2x.png */; };
 		28D72ED71840980F0002792F /* JTRB4QSYWFZRB.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D72ED51840980F0002792F /* JTRB4QSYWFZRB.m */; };
 		28D72ED81840980F0002792F /* JTRB4QSYWFZRB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D72ED61840980F0002792F /* JTRB4QSYWFZRB.xib */; };
@@ -537,6 +539,9 @@
 		28B6F933184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTRB4WGJLZDGZViewController.h; sourceTree = "<group>"; };
 		28B6F934184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTRB4WGJLZDGZViewController.m; sourceTree = "<group>"; };
 		28B6F935184F72E0007A6B97 /* JTRB4WGJLZDGZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JTRB4WGJLZDGZViewController.xib; sourceTree = "<group>"; };
+		28B8CF041AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Ncrb4NcwgzdywrbViewController.xib; sourceTree = "<group>"; };
+		28B8CF051AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ncrb4NcwgzdywrbViewController.m; sourceTree = "<group>"; };
+		28B8CF061AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ncrb4NcwgzdywrbViewController.h; sourceTree = "<group>"; };
 		28C3C5381844DC0900817C07 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		28D72ED41840980E0002792F /* JTRB4QSYWFZRB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTRB4QSYWFZRB.h; sourceTree = "<group>"; };
 		28D72ED51840980F0002792F /* JTRB4QSYWFZRB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTRB4QSYWFZRB.m; sourceTree = "<group>"; };
@@ -1285,6 +1290,9 @@
 				2898A3D918F2C1E1008C773D /* gcztCell.h */,
 				2898A3DA18F2C1E1008C773D /* gcztCell.m */,
 				2898A3DC18F2C1FF008C773D /* gcztCell.xib */,
+				28B8CF041AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.xib */,
+				28B8CF051AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.m */,
+				28B8CF061AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.h */,
 				2897FBE118E3036400366140 /* GCJSFilterViewController.h */,
 				2897FBE218E3036400366140 /* GCJSFilterViewController.m */,
 				2897FBE318E3036400366140 /* GCJSFilterViewController.xib */,
@@ -1798,6 +1806,7 @@
 				28D72EE21841021D0002792F /* QDRB4GWDYWFZRBViewController.xib in Resources */,
 				28D72EE71841DFC20002792F /* HSYBViewController.xib in Resources */,
 				28D72EEC1841E7E80002792F /* HSYB4GJZB4QWViewController.xib in Resources */,
+				28B8CF071AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.xib in Resources */,
 				28D72EF1184209720002792F /* HSYB4GJZB4PTW2GViewController.xib in Resources */,
 				28D72EF618422C930002792F /* HSYB4GJZB4PTW3GViewController.xib in Resources */,
 				28D72EFB184230070002792F /* HSYB4GJZB4OCS3GViewController.xib in Resources */,
@@ -1917,6 +1926,7 @@
 				289DC8E91838732900523A8A /* HSRB43GYWViewController.m in Sources */,
 				289DC8EF1838FB1100523A8A /* LeveyPopListViewCell.m in Sources */,
 				289DC8F01838FB1100523A8A /* LeveyPopListView.m in Sources */,
+				28B8CF081AA2A91D00C062A1 /* Ncrb4NcwgzdywrbViewController.m in Sources */,
 				28F6E565183A4AF80075BAA6 /* HSRB42GYWViewController.m in Sources */,
 				2865A9DE183B9D0400CB5865 /* HSRB4KDYWViewController.m in Sources */,
 				284F0CC6183BB22C008CE2F5 /* HSRB42g3grhViewController.m in Sources */,

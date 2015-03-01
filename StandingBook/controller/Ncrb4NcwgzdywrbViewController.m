@@ -1,47 +1,53 @@
 //
 //  ViewController.m
 //  Custom
-//
+//农村日报-农村网格重点业务日报
 //  Created by tan on 13-1-22.
 //  Copyright (c) 2013年 adways. All rights reserved.
 //
 
-#import "HSRB4zdywlzViewController.h"
+#import "Ncrb4NcwgzdywrbViewController.h"
 #import "CustomTableView.h"
 #import "DateUtils.h"
+#import "LeveyPopListView.h"
 
-@interface HSRB4zdywlzViewController ()
+@interface Ncrb4NcwgzdywrbViewController ()
 
 @end
 
-@implementation HSRB4zdywlzViewController
+@implementation Ncrb4NcwgzdywrbViewController
 @synthesize aSIHTTPRequestUtils;
 @synthesize reslist;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //self.title=@"渠道网格重点业务日报";
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-        //self.edgesForExtendedLayout = UIExtendedEdgeNone;
+        ////self.edgesForExtendedLayout = UIExtendedEdgeNone;
         self.edgesForExtendedLayout = UIRectEdgeNone;
+        [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     }
-    //self.title=@"网格重点业务日报";
     col=5;
-    tableviewy=84;
-    reportFlag=@"ptw2g";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"日期" style:UIBarButtonItemStylePlain target:self action:@selector(showDateSelectView)];
+    tableviewy=95;
+    reportFlag=@"ptw2g";//2g发展日报
+    showwgFlag=YES;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"筛选" style:UIBarButtonItemStylePlain target:self action:@selector(showActionSheet)];
     [self initSwitchButton];
-    [self setcurrentSwitchStyle:self.switch2fButton];
+    [self setcurrentSwitchStyle:self.switchptw2gButton];
     
-    self.scroll_view.contentSize=CGSizeMake(670,46);
+    self.scroll_view.contentSize=CGSizeMake(450,46);
     [self.scroll_view setScrollEnabled:YES];
     [self.scroll_view setShowsHorizontalScrollIndicator:NO];
     
     self.pickerView.frame = CGRectMake(0, 480, 320, 300);
     
     NSString *date=[DateUtils getYesterdayStr];
-    [super setWrapTitle:@"网格重点业务日报" date:date];
-    [self initData:date];
+    [super setWrapTitle:@"农村网格重点业务日报" date:date];
+    _reqdic = [[NSMutableDictionary alloc] init];
+    [_reqdic setObject:date forKey:@"date"];
+    [_reqdic setObject:@"全部" forKey:@"wg"];
+    [self initData:_reqdic];
     [self initToolBar4zsjf];
 }
 
@@ -59,33 +65,22 @@
             int a=[g2s intValue];
             [md setValue:[NSNumber numberWithInt:a] forKey:@"pt2gDylj"];
             
-            NSString *g3s=[dd objectForKey:@"pt3gDylj"];
+            NSString *g3s=[dd objectForKey:@"ocs2gDyljsx"];
             int b=[g3s intValue];
-            [md setValue:[NSNumber numberWithInt:b] forKey:@"pt3gDylj"];
+            [md setValue:[NSNumber numberWithInt:b] forKey:@"ocs2gDyljsx"];
             
-            NSString *kdfzrb=[dd objectForKey:@"ocs3gDylj"];
+            NSString *kdfzrb=[dd objectForKey:@"pt4gDylj"];
             int c=[kdfzrb intValue];
-            [md setValue:[NSNumber numberWithInt:c] forKey:@"ocs3gDylj"];
+            [md setValue:[NSNumber numberWithInt:c] forKey:@"pt4gDylj"];
             
-            NSString *zdywKdcjdylj=[dd objectForKey:@"kdDylj"];
+            NSString *zdywKdcjdylj=[dd objectForKey:@"ocs3gjhdylj"];
             int d=[zdywKdcjdylj intValue];
-            [md setValue:[NSNumber numberWithInt:d] forKey:@"kdDylj"];
+            [md setValue:[NSNumber numberWithInt:d] forKey:@"ocs3gjhdylj"];
             
-            NSString *a2g3gfz=[dd objectForKey:@"kdcDylj"];
-            int e=[a2g3gfz intValue];
-            [md setValue:[NSNumber numberWithInt:e] forKey:@"kdcDylj"];
             
-            NSString *zdywKdcjdylj1=[dd objectForKey:@"g2g3dylj"];
-            int f=[zdywKdcjdylj1 intValue];
-            [md setValue:[NSNumber numberWithInt:f] forKey:@"g2g3dylj"];
-            
-            NSString *a2g3gfz1=[dd objectForKey:@"g4dylj"];
-            int g=[a2g3gfz1 intValue];
-            [md setValue:[NSNumber numberWithInt:g] forKey:@"g4dylj"];
-            
-            NSString *iptvfz=[dd objectForKey:@"iptvdylj"];
-            int h=[iptvfz intValue];
-            [md setValue:[NSNumber numberWithInt:h] forKey:@"iptvdylj"];
+            NSString *zdywKdcjdylj1=[dd objectForKey:@"g2g3rhdylj"];
+            int e=[zdywKdcjdylj1 intValue];
+            [md setValue:[NSNumber numberWithInt:e] forKey:@"g2g3rhdylj"];
             
             
             [newArr addObject:md];
@@ -111,20 +106,16 @@
         
         if (reportFlag==nil ||[@"ptw2g" isEqualToString:reportFlag]) {
             sortByCol=@"pt2gDylj";
-        }else if([@"ptw3g" isEqualToString:reportFlag]){
-            sortByCol=@"pt3gDylj";
-        }else if([@"ocs3g" isEqualToString:reportFlag]){
-            sortByCol=@"ocs3gDylj";
-        }else if([@"kd" isEqualToString:reportFlag]){
-            sortByCol=@"kdDylj";
-        }else if([@"kdc" isEqualToString:reportFlag]){
-            sortByCol=@"kdcDylj";
+        }else if([@"ocs2g" isEqualToString:reportFlag]){
+            sortByCol=@"ocs2gDyljsx";
+        }else if([@"3g" isEqualToString:reportFlag]){
+            sortByCol=@"pt4gDylj";
+        }else if([@"ocs3gjh" isEqualToString:reportFlag]){
+            sortByCol=@"ocs3gjhdylj";
         }else if([@"2g3grh" isEqualToString:reportFlag]){
-            sortByCol=@"g2g3dylj";
-        }else if([@"4g" isEqualToString:reportFlag]){
+            sortByCol=@"g2g3rhdylj";
+        }else if([@"ptw4g" isEqualToString:reportFlag]){
             sortByCol=@"g4dylj";
-        }else if([@"iptv" isEqualToString:reportFlag]){
-            sortByCol=@"iptvdylj";
         }
         
         
@@ -133,7 +124,7 @@
         
         [amarr sortUsingDescriptors:sortDescriptors];
         
-        //[amarr addObject:d];
+        [amarr addObject:d];
         
         [descripor release];
         [sortDescriptors release];
@@ -142,7 +133,6 @@
         return arr;
     }
 }
-
 
 
 
@@ -161,38 +151,70 @@
     
 }
 
--(void)initData:(NSString*)adate{
-    
+-(void)initData:(NSMutableDictionary*)requestDic{
+    if (showwgFlag==YES) {
+        [requestDic setObject:@"ANY" forKey:@"showwgFlag"];
+    }
     aSIHTTPRequestUtils = [[ASIHTTPRequestUtils alloc] initWithHandle:self];
-    NSString* subUrl=[[[NSString alloc] initWithString:@"tm/ZSJFAction.do?method=hsrb4zdywlz"] autorelease];
-    
-    NSMutableDictionary* requestData = [[NSMutableDictionary alloc] init];
-    [requestData setObject:adate forKey:@"date"];
-    [requestData setObject:[DataProcess getSysUserExtendedMVO].sysUserSVO.sysUserId forKey:@"staffId"];
-    [aSIHTTPRequestUtils requestData:subUrl data:requestData action:@selector(doAfterinitData:) isShowProcessBar:YES];
-    [requestData  release];
-    
+    NSString* subUrl=[[[NSString alloc] initWithString:@"tm/ZSJFAction.do?method=ncrb4ncwgrb"] autorelease];
+    [requestDic setObject:[DataProcess getSysUserExtendedMVO].sysUserSVO.sysUserId forKey:@"staffId"];
+    [aSIHTTPRequestUtils requestData:subUrl data:requestDic action:@selector(doAfterinitData:) isShowProcessBar:YES];
 }
 
 -(void)initSwitchButton{
-    [self.switch2fButton setTitle:@"2G(含OCS)" forState:UIControlStateNormal];
-    [self.swith3gButton setTitle:@"普通网3G" forState:UIControlStateNormal];
-    [self.switchocs3gButton setTitle:@"OCS3G" forState:UIControlStateNormal];
-    [self.switchkdButton setTitle:@"宽带装" forState:UIControlStateNormal];
-    [self.switchkdcButton setTitle:@"宽带拆" forState:UIControlStateNormal];
-    [self.switch2g3gButton setTitle:@"2G3G融合" forState:UIControlStateNormal];
-    [self.switch4gButton setTitle:@"4G" forState:UIControlStateNormal];
-    [self.switchiptvButton setTitle:@"IPTV" forState:UIControlStateNormal];
-    [self setSwitchButtonStyle:self.switch2fButton];
-    [self setSwitchButtonStyle:self.swith3gButton];
-    [self setSwitchButtonStyle:self.switchocs3gButton];
-    [self setSwitchButtonStyle:self.switchkdButton];
-    [self setSwitchButtonStyle:self.switchkdcButton];
-    [self setSwitchButtonStyle:self.switch2g3gButton ];
-    [self setSwitchButtonStyle:self.switch4gButton ];
-    [self setSwitchButtonStyle:self.switchiptvButton ];
+    [self.switchptw2gButton setTitle:@"普通网2G" forState:UIControlStateNormal];
+    [self.swithocs2gButton setTitle:@"OCS2G" forState:UIControlStateNormal];
+    [self.switch3gButton setTitle:@"普通3G" forState:UIControlStateNormal];
+    [self.switchocs3gjhButton setTitle:@"OCS3G" forState:UIControlStateNormal];
+    [self.switchg2g3rhButton setTitle:@"2G3G融合" forState:UIControlStateNormal];
+    [self.switch4gButton setTitle:@"普通4G" forState:UIControlStateNormal];
+    [self setSwitchButtonStyle:self.switchptw2gButton];
+    [self setSwitchButtonStyle:self.swithocs2gButton];
+    [self setSwitchButtonStyle:self.switch3gButton];
+    [self setSwitchButtonStyle:self.switchocs3gjhButton];
+    [self setSwitchButtonStyle:self.switchg2g3rhButton];
+     [self setSwitchButtonStyle:self.switch4gButton];
+}
+
+
+
+
+-(void)showActionSheet{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"筛选条件"
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"选择地区", @"选择日期",nil];
+    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+    [actionSheet showInView:self.view];
     
 }
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==0) {
+        [self showListView];
+        NSLog(@"xxxxxxxxxxxx");
+    }else if (buttonIndex==1){
+        [self showDateSelectView];
+    }
+}
+
+
+
+- (void)showListView {
+    LeveyPopListView *lplv = [[LeveyPopListView alloc] initWithTitle:@"选择地区" options:self.options handler:^(NSInteger anIndex) {
+        NSDictionary* dqdic=_options[anIndex];
+        NSString* dq=[dqdic objectForKey:@"diqu"];
+        NSLog(@"vvvvvvvvv%@",_options[anIndex]);
+        [_reqdic setObject:dq forKey:@"diqu"];
+        [self initData:_reqdic];
+        
+    }];
+    //lplv.delegate = self;
+    [lplv showInView:self.view animated:YES];
+}
+
 
 
 -(void)setSwitchButtonStyle:(UIButton*) button{
@@ -203,8 +225,20 @@
     button.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
     button.titleLabel.textAlignment=NSTextAlignmentCenter;
     
-    
 }
+
+
+//初始化网格列表，用于展示查询条件
+-(void)initwgList:(NSDictionary*) dic{
+    if(showwgFlag==YES){
+        //初始化并关闭开关
+        NSMutableArray* array=[self.reslist objectForKey:@"wglist"];
+        self.options=array;
+        showwgFlag=NO;
+        [_reqdic setObject:@"" forKey:@"showwgFlag"];
+    }
+}
+
 
 
 
@@ -213,12 +247,13 @@
     //解析服务器返回数据
     if (responseData!=nil) {
         NSDictionary* list = [DataProcess getNSDictionaryFromNSData:responseData];
-       // if(reportFlag==nil || [reportFlag isEqualToString:@"2gfzrb"] || [reportFlag isEqualToString:@"3gfzrb"]){
+        if(reportFlag==nil || [reportFlag isEqualToString:@"ptw2g"] || [reportFlag isEqualToString:@"3g"]||[reportFlag isEqualToString:@"ocs2g"]||[reportFlag isEqualToString:@"ptw4g"]){
             [self initTableTitle42g3g];
-//        }else{
-//            [self initTableTitle4kdfz];
-//        }
+        }else{
+            [self initTableTitle4wyhlwgx];
+        }
         self.reslist=list;
+        [self initwgList:list];
     }
     
     NSMutableArray* array=[self.reslist objectForKey:@"list"];
@@ -236,9 +271,7 @@
             [rightKeys addObject:key];
         }
     }
-    
-    NSMutableArray *sortedArr=[self sort:array];
-    
+     NSMutableArray *sortedArr=[self sort:array];
     NSMutableArray *dArray = [NSMutableArray arrayWithCapacity:0];
     for (int i = 0; i < [sortedArr  count]; i ++) {//行数
         NSDictionary* vo=sortedArr[i];
@@ -253,37 +286,51 @@
                 }else if([key isEqualToString:@"2"]){
                     rfa=[vo objectForKey:@"pt2gDylj"];
                 }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"pt2gSytqlj"];
+                    rfa=[vo objectForKey:@"pt2gSytq"];
                 }else if([key isEqualToString:@"4"]){
                     rfa=[vo objectForKey:@"pt2gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"ptw3g"]){
+            }else if([reportFlag isEqualToString:@"ocs2g"]){
+                NSString * rfa=@"";
+                if([key isEqualToString:@"0"]){
+                    rfa=[vo objectForKey:@"wgMc"];
+                }else if([key isEqualToString:@"1"]){
+                    rfa=[vo objectForKey:@"ocs2gRxs"];
+                }else if([key isEqualToString:@"2"]){
+                    rfa=[vo objectForKey:@"ocs2gRjh"];
+                }else if([key isEqualToString:@"3"]){
+                    rfa=[vo objectForKey:@"ocs2gDyljsx"];
+                }else if([key isEqualToString:@"4"]){
+                    rfa=[vo objectForKey:@"ocs2gSyljjh"];
+                }
+                [data setValue:rfa forKey:key];
+            }else if([reportFlag isEqualToString:@"3g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
                 }else if([key isEqualToString:@"1"]){
                     rfa=[vo objectForKey:@"pt3gRfz"];
                 }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"pt3gDylj"];
+                    rfa=[vo objectForKey:@"pt4gDylj"];
                 }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"pt3gSytqlj"];
+                    rfa=[vo objectForKey:@"pt5gSytq"];
                 }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"pt3gZzs"];
+                    rfa=[vo objectForKey:@"pt6gZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"ocs3g"]){
+            }else if([reportFlag isEqualToString:@"ocs3gjh"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
                 }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"ocs3gRfz"];
+                    rfa=[vo objectForKey:@"ocs3gjhRfz"];
                 }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"ocs3gDylj"];
+                    rfa=[vo objectForKey:@"ocs3gjhDylj"];
                 }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"ocs3gSytqlj"];
+                    rfa=[vo objectForKey:@"ocs3gjhSytqlj"];
                 }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"ocs3gZzs"];
+                    rfa=[vo objectForKey:@"ocs3gjhZzs"];
                 }
                 [data setValue:rfa forKey:key];
             }else if([reportFlag isEqualToString:@"2g3grh"]){
@@ -291,69 +338,27 @@
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
                 }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"g2g3rfz"];
+                    rfa=[vo objectForKey:@"g2g3rhRfz"];
                 }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"g2g3dylj"];
+                    rfa=[vo objectForKey:@"g2g3rhDylj"];
                 }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"g2g3sytq"];
+                    rfa=[vo objectForKey:@"g2g3rhSytqlj"];
                 }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"g2g3zzs"];
+                    rfa=[vo objectForKey:@"g2g3rhZzs"];
                 }
                 [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"4g"]){
+            }else if([reportFlag isEqualToString:@"ptw4g"]){
                 NSString * rfa=@"";
                 if([key isEqualToString:@"0"]){
                     rfa=[vo objectForKey:@"wgMc"];
                 }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"g4rfz"];
+                    rfa=[vo objectForKey:@"g4Rfz"];
                 }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"g4dylj"];
+                    rfa=[vo objectForKey:@"g4Dylj"];
                 }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"g4sytqlj"];
+                    rfa=[vo objectForKey:@"g4Sytqlj"];
                 }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"g4zzs"];
-                }
-                [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"kd"]){
-                NSString * rfa=@"";
-                if([key isEqualToString:@"0"]){
-                    rfa=[vo objectForKey:@"wgMc"];
-                }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"kdRfz"];
-                }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"kdDylj"];
-                }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"kdSytqlj"];
-                }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"kdZzs"];
-                }
-                [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"kdc"]){
-                NSString * rfa=@"";
-                if([key isEqualToString:@"0"]){
-                    rfa=[vo objectForKey:@"wgMc"];
-                }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"kdcRfz"];
-                }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"kdcDylj"];
-                }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"kdcSytqlj"];
-                }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"kdcZzs"];
-                }
-                [data setValue:rfa forKey:key];
-            }else if([reportFlag isEqualToString:@"iptv"]){
-                NSString * rfa=@"";
-                if([key isEqualToString:@"0"]){
-                    rfa=[vo objectForKey:@"wgMc"];
-                }else if([key isEqualToString:@"1"]){
-                    rfa=[vo objectForKey:@"iptvrfz"];
-                }else if([key isEqualToString:@"2"]){
-                    rfa=[vo objectForKey:@"ipdtdylj"];
-                }else if([key isEqualToString:@"3"]){
-                    rfa=[vo objectForKey:@"iptvsytq"];
-                }else if([key isEqualToString:@"4"]){
-                    rfa=[vo objectForKey:@"iptvzzs"];
+                    rfa=[vo objectForKey:@"g4Zzs"];
                 }
                 [data setValue:rfa forKey:key];
             }
@@ -371,7 +376,6 @@
     CGRect frame = view.frame;
     frame.origin = CGPointMake(0, tableviewy);
     view.frame = frame;
-    //[self.view addSubview:view];
     [self.view insertSubview:view atIndex:0];
     [view release];
     
@@ -382,7 +386,7 @@
 -(void)setDefaultSwitchImage:(UIButton*)btn{
     for(UIView *view in self.scroll_view.subviews){
         NSLog(@"tagtagtagtag%d",view.tag);
-        if(view.tag>=200 && view.tag<=207){
+        if(view.tag>=200 && view.tag<=205){
             if(view.tag!=btn.tag+200){
                 [view setHidden:YES];
             }else{
@@ -398,7 +402,7 @@
 
 
 -(void)setcurrentSwitchStyle:(UIButton*) button{
-    for(UIView *view in self.scroll_view.subviews){
+    for(UIView *view in self.view.subviews){
         if([view isKindOfClass:[UIButton class]]){
             UIButton *btn =(UIButton*)view;
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -417,40 +421,29 @@
         tableviewy=84;
         [self initTableTitle42g3g];
     }else if(sender.tag==1){
-        reportFlag=@"ptw3g";
+        reportFlag=@"ocs2g";
         col=5;
         tableviewy=84;
         [self initTableTitle42g3g];
     }else if(sender.tag==2){
-        reportFlag=@"ocs3g";
+        reportFlag=@"3g";
         col=5;
-        tableviewy=96;
+        tableviewy=84;
         [self initTableTitle42g3g];
     }else if(sender.tag==3){
-        reportFlag=@"2g3grh";
+        reportFlag=@"ocs3gjh";
         col=5;
-        tableviewy=96;
+        tableviewy=84;
         [self initTableTitle42g3g];
     }else if(sender.tag==4){
-        reportFlag=@"4g";
+        reportFlag=@"2g3grh";
         col=5;
-        tableviewy=96;
+        tableviewy=84;
         [self initTableTitle42g3g];
-    }
-    else if(sender.tag==5){
-        reportFlag=@"kd";
+    }else if(sender.tag==5){
+        reportFlag=@"ptw4g";
         col=5;
-        tableviewy=96;
-        [self initTableTitle42g3g];
-    }else if(sender.tag==6){
-        reportFlag=@"kdc";
-        col=5;
-        tableviewy=96;
-        [self initTableTitle42g3g];
-    }else if(sender.tag==7){
-        reportFlag=@"iptv";
-        col=5;
-        tableviewy=96;
+        tableviewy=84;
         [self initTableTitle42g3g];
     }
     [self doAfterinitData:nil];
@@ -472,7 +465,7 @@
     CGRect rectdq = CGRectMake(0, 60, 52, 23);
     UILabel *labeldq = [[UILabel alloc] initWithFrame:rectdq];
     labeldq.tag=100;
-    labeldq.text = @"网格名称";
+    labeldq.text = @"网格";
     [self setLabelStyle:labeldq];
     
     CGRect rectrfz = CGRectMake(53, 60, 68, 23);
@@ -498,68 +491,49 @@
     labelzzs.tag=104;
     labelzzs.text = @"增长数";
     [self setLabelStyle:labelzzs];
+     
     
     [self.view addSubview:labeldq];
     [self.view addSubview:labelrfz];
     [self.view addSubview:labeldylj];
     [self.view addSubview:labelsytqlj];
-    [self.view addSubview:labelzzs];
+    [self.view addSubview:labelzzs]; 
     
     // [super viewDidLoad];
     
 }
 
--(void)initTableTitle4kdfz{
+-(void)initTableTitle4wyhlwgx{
     [self removeTitle];//删除原来表头，重建表头
-    CGRect rectdq = CGRectMake(0, 60, 42, 34);
+    CGRect rectdq = CGRectMake(0, 60, 79, 23);
     UILabel *labeldq = [[UILabel alloc] initWithFrame:rectdq];
     labeldq.tag=100;
-    labeldq.text = @"地区";
+    labeldq.text = @"片区";
     [self setLabelStyle:labeldq];
     
-    CGRect rectrfz = CGRectMake(43, 60, 45, 34);
+    CGRect rectrfz = CGRectMake(80, 60, 79, 23);
     UILabel *labelrfz = [[UILabel alloc] initWithFrame:rectrfz];
     labelrfz.tag=101;
     labelrfz.text = @"日发展";
     [self setLabelStyle:labelrfz];
     
-    CGRect rectdylj = CGRectMake(89, 60, 45, 34);
+    CGRect rectdylj = CGRectMake(160, 60, 79, 23);
     UILabel *labeldylj = [[UILabel alloc] initWithFrame:rectdylj];
     labeldylj.tag=102;
     labeldylj.text = @"当月累计";
     [self setLabelStyle:labeldylj];
     
-    CGRect rectsytqlj = CGRectMake(135, 60, 45, 34);
+    CGRect rectsytqlj = CGRectMake(240, 60, 80, 23);
     UILabel *labelsytqlj = [[UILabel alloc] initWithFrame:rectsytqlj];
     labelsytqlj.tag=103;
-    labelsytqlj.text = @"上月同期累计";
+    labelsytqlj.text = @"当月累计拆";
     [self setLabelStyle:labelsytqlj];
     
-    CGRect rectzzs = CGRectMake(181, 60, 45, 34);
-    UILabel *labelzzs = [[UILabel alloc] initWithFrame:rectzzs];
-    labelzzs.tag=104;
-    labelzzs.text = @"增长数";
-    [self setLabelStyle:labelzzs];
-    
-    CGRect rectqnljfz = CGRectMake(227, 60, 45, 34);
-    UILabel *labelqnljfz = [[UILabel alloc] initWithFrame:rectqnljfz];
-    labelqnljfz.tag=105;
-    labelqnljfz.text = @"去年累计发展";
-    [self setLabelStyle:labelqnljfz];
-    
-    CGRect rectjnljfz = CGRectMake(273, 60, 45, 34);
-    UILabel *labeljnljfz = [[UILabel alloc] initWithFrame:rectjnljfz];
-    labeljnljfz.tag=106;
-    labeljnljfz.text = @"今年累计发展";
-    [self setLabelStyle:labeljnljfz];
     
     [self.view addSubview:labeldq];
     [self.view addSubview:labelrfz];
     [self.view addSubview:labeldylj];
-    [self.view addSubview:labelzzs];
     [self.view addSubview:labelsytqlj];
-    [self.view addSubview:labelqnljfz];
-    [self.view addSubview:labeljnljfz];
 }
 
 -(void)setLabelStyle:(UILabel*)label{
@@ -594,7 +568,7 @@
     [UIView commitAnimations];
 }
 
-- (IBAction)chooseDate:(UIDatePicker*)sender {
+- (IBAction)chooseDate:(id)sender {
     NSDate *select = [self.myDatePicker date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     if (self.myDatePicker.datePickerMode == UIDatePickerModeTime) {
@@ -608,34 +582,42 @@
     }else{
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSString *selectDate =  [dateFormatter stringFromDate:select];
-        [super setWrapTitle:@"网格重点业务日报" date:selectDate];
+        [super setWrapTitle:@"农村网格重点业务日报" date:selectDate];
         NSLog(@"selectDateselectDate%@",selectDate);
         //self.myDateLabel.text = selectDate;
-        [self initData:selectDate];
+        [_reqdic setObject:selectDate forKey:@"date"];
+        [self initData:_reqdic];
         [self removePickerView:nil];
         //_dateTag = YES;
     }
-}
+} 
 
 
 - (void)dealloc {
     [aSIHTTPRequestUtils release];
     [reslist release];
-    [_switch2fButton release];
-    [_swith3gButton release];
-    [_switchkdButton release];
-    [_switchocs3gButton release];
-    [_whickReportFlag release];
-    [_scroll_view release];
-    [_switch2g3gButton release];
+    [_swithocs2gButton release];
+    [_switch3gButton release];
+    [_switchptw2gButton release];
     [_switch4gButton release];
-    [_switchiptvButton release];
+    [_whickReportFlag release];
+    [_reqdic release];
+    [_options release];
+    [_scroll_view release];
     [super dealloc];
 }
 - (void)viewDidUnload {
     
     [self setScroll_view:nil];
     [super viewDidUnload];
+}
+
+#pragma mark - LeveyPopListView delegates
+- (void)leveyPopListView:(LeveyPopListView *)popListView didSelectedIndex:(NSInteger)anIndex {
+    //_infoLabel.text = [NSString stringWithFormat:@"You have selected %@",_dq_options[anIndex]];
+}
+- (void)leveyPopListViewDidCancel {
+    //_infoLabel.text = @"You have cancelled";
 }
 
 

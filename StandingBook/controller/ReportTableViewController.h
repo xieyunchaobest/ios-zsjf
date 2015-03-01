@@ -26,6 +26,9 @@
 @property (retain, nonatomic) IBOutlet UIButton *swith3gButton;
 @property (retain, nonatomic) IBOutlet UIButton *swith4gButton;
 @property (retain, nonatomic) IBOutlet UIButton *switch2g2gButton;
+
+@property (retain, nonatomic) IBOutlet UIButton *switchiptvButton;
+
 @property (retain, nonatomic) IBOutlet UIButton *switchkdinstallButton;
 @property (retain, nonatomic) IBOutlet UIButton *switchunistallButton;
 

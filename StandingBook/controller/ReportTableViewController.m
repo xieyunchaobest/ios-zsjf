@@ -90,7 +90,7 @@
     }else{
         [super setWrapTitle:@"重点业务日报(按客户群)" date:date]; 
     }
-    self.scroll_view.contentSize=CGSizeMake(500,
+    self.scroll_view.contentSize=CGSizeMake(580,
                                             46);
     [self.scroll_view setScrollEnabled:YES];
     
@@ -140,13 +140,14 @@
     [self.switchkdinstallButton setTitle:@"宽带发展日报" forState:UIControlStateNormal];
     [self.switchunistallButton setTitle:@"宽带拆机日报" forState:UIControlStateNormal];
     [self.switch2g2gButton setTitle:@"2G3G发展日报" forState:UIControlStateNormal];
+    [self.switchiptvButton setTitle:@"IPTV发展日报" forState:UIControlStateNormal];
     [self setSwitchButtonStyle:self.switch2fButton];
     [self setSwitchButtonStyle:self.swith3gButton];
     [self setSwitchButtonStyle:self.swith4gButton];
     [self setSwitchButtonStyle:self.switchkdinstallButton];
     [self setSwitchButtonStyle:self.switchunistallButton];
     [self setSwitchButtonStyle:self.switch2g2gButton];
-    
+    [self setSwitchButtonStyle:self.switchiptvButton];
 
 }
 
@@ -169,7 +170,7 @@
     //解析服务器返回数据
     if (responseData!=nil) {
          NSDictionary* list = [DataProcess getNSDictionaryFromNSData:responseData];
-        if(reportFlag==nil || [reportFlag isEqualToString:@"2gfzrb"] || [reportFlag isEqualToString:@"3gfzrb"] || [reportFlag isEqualToString:@"4gfzrb"] || [reportFlag isEqualToString:@"2g3gfz"]
+        if(reportFlag==nil || [reportFlag isEqualToString:@"2gfzrb"] || [reportFlag isEqualToString:@"3gfzrb"] || [reportFlag isEqualToString:@"4gfzrb"] || [reportFlag isEqualToString:@"2g3gfz"]|| [reportFlag isEqualToString:@"iptv"]
            ){
              [self initTableTitle42g3g];
         }else{
@@ -296,6 +297,20 @@
                     rfa=[vo objectForKey:@"zdyw2g3gzzs"];
                 }
                 [data setValue:rfa forKey:key];
+            }else if([reportFlag isEqualToString:@"iptv"]){
+                NSString * rfa=@"";
+                if([key isEqualToString:@"0"]){
+                    rfa=[vo objectForKey:@"zdywQy"];
+                }else if([key isEqualToString:@"1"]){
+                    rfa=[vo objectForKey:@"zdywiptvrfz"];
+                }else if([key isEqualToString:@"2"]){
+                    rfa=[vo objectForKey:@"zdywiptvdylj"];
+                }else if([key isEqualToString:@"3"]){
+                    rfa=[vo objectForKey:@"zdywiptvsytq"];
+                }else if([key isEqualToString:@"4"]){
+                    rfa=[vo objectForKey:@"zdywiptvzzs"];
+                }
+                [data setValue:rfa forKey:key];
             }
         }
         [dArray addObject:data];
@@ -339,6 +354,8 @@
             sortByCol=@"zdywKdcjdylj";
         }else if([@"2g3gfz" isEqualToString:reportFlag]){
             sortByCol=@"zdyw2g3gylj";
+        }else if([@"iptv" isEqualToString:reportFlag]){
+            sortByCol=@"zdywiptvdylj";
         }
         
         
@@ -385,6 +402,10 @@
             int e=[a2g3gfz intValue];
             [md setValue:[NSNumber numberWithInt:e] forKey:@"zdyw2g3gylj"];
             
+            NSString *iptvztb=[dd objectForKey:@"zdywiptvdylj"];
+            int f=[iptvztb intValue];
+            [md setValue:[NSNumber numberWithInt:f] forKey:@"zdywiptvdylj"];
+            
             
             [newArr addObject:md];
             [md release];
@@ -400,7 +421,7 @@
 -(void)setDefaultSwitchImage:(UIButton*)btn{
     for(UIView *view in self.scroll_view.subviews){
         NSLog(@"tagtagtagtag%d",view.tag);
-        if(view.tag>=200 && view.tag<=205){
+        if(view.tag>=200 && view.tag<=206){
             if(view.tag!=btn.tag+200){
                  [view setHidden:YES];
             }else{
@@ -459,7 +480,11 @@
         col=5;
         tableviewy=84;
         [self initTableTitle42g3g];
-
+    }else if(sender.tag==6){
+        reportFlag=@"iptv";
+        col=5;
+        tableviewy=84;
+        [self initTableTitle42g3g];
     }
  [self doAfterinitData:nil];
     
@@ -698,6 +723,7 @@
     [_fromPageFlag release];
     [_swith4gButton release];
     [_scroll_view release];
+    [_switchiptvButton release];
     [super dealloc];
 }
 - (void)viewDidUnload {

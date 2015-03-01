@@ -29,6 +29,7 @@ UIDatePicker *datePicker;
 @property (retain, nonatomic) IBOutlet UIButton *switchkdcButton;//宽带拆
 @property (retain, nonatomic) IBOutlet UIButton *switch2g3gButton;//2g3g融合
 @property (retain, nonatomic) IBOutlet UIButton *switch4gButton;//4融合
+@property (retain, nonatomic) IBOutlet UIButton *switchiptvButton;//iptv
 
 @property (retain, nonatomic) IBOutlet UIView *pickerView;
 @property (retain, nonatomic) IBOutlet UIDatePicker *myDatePicker;

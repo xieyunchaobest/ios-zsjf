@@ -24,6 +24,7 @@
 #import "Xyrb4XywgzdywViewController.h"
 #import "Qdrb4QdkhjlViewController.h"
 #import "HSRB44gywrbViewController.h"
+#import "Ncrb4NcwgzdywrbViewController.h"
 
 @implementation dayReportViewController
 
@@ -443,6 +444,14 @@
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
     }else if([reportName isEqualToString:@"4G业务日报"]){
+        HSRB44gywrbViewController *g2g3ywrbview= [[HSRB44gywrbViewController alloc] initWithNibName:@"HSRB44gywrbViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"农村网格重点业务日报"]){
+        Ncrb4NcwgzdywrbViewController *g2g3ywrbview= [[Ncrb4NcwgzdywrbViewController alloc] initWithNibName:@"Ncrb4NcwgzdywrbViewController" bundle:nil];
+        [self.navigationController pushViewController:g2g3ywrbview animated:YES];
+        [g2g3ywrbview release];
+    }else if([reportName isEqualToString:@"欠费日通报"]){
         HSRB44gywrbViewController *g2g3ywrbview= [[HSRB44gywrbViewController alloc] initWithNibName:@"HSRB44gywrbViewController" bundle:nil];
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];

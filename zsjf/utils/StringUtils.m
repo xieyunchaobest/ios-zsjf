@@ -83,7 +83,7 @@
 //拼接url
 +(NSString*)getUrl:(NSString*)subUrl{
 //  return [NSString stringWithFormat:@"http://svr913.cattsoft.com:9961/web_mos/%@",subUrl];
-    //jboss
+    //jbossG
     //return [NSString stringWithFormat:@"http://192.168.105.234:8080/web_mos/%@",subUrl];
     //本机
 // return [NSString stringWithFormat:@"http://192.168.1.106:8080/web_mos/%@",subUrl];
