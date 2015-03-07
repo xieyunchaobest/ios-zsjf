@@ -25,6 +25,7 @@
 #import "Qdrb4QdkhjlViewController.h"
 #import "HSRB44gywrbViewController.h"
 #import "Ncrb4NcwgzdywrbViewController.h"
+#import "Qfrb4QfrtbViewController.h"
 
 @implementation dayReportViewController
 
@@ -452,7 +453,7 @@
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
     }else if([reportName isEqualToString:@"欠费日通报"]){
-        HSRB44gywrbViewController *g2g3ywrbview= [[HSRB44gywrbViewController alloc] initWithNibName:@"HSRB44gywrbViewController" bundle:nil];
+        Qfrb4QfrtbViewController *g2g3ywrbview= [[Qfrb4QfrtbViewController alloc] initWithNibName:@"Qfrb4QfrtbViewController" bundle:nil];
         [self.navigationController pushViewController:g2g3ywrbview animated:YES];
         [g2g3ywrbview release];
     }

@@ -45,6 +45,8 @@
 		28220D2B18C630C400DC875B /* home_page_background_960@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28220D2A18C630C400DC875B /* home_page_background_960@2x.png */; };
 		2822F5C916B7CD1900F1E6AC /* use_soon_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 2822F5C716B7CD1900F1E6AC /* use_soon_press.png */; };
 		2822F5CE16B7D50800F1E6AC /* use_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2822F5CD16B7D50800F1E6AC /* use_soon@2x.png */; };
+		28298C131AAAA9A400E18D34 /* Qfrb4QfrtbViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28298C101AAAA9A400E18D34 /* Qfrb4QfrtbViewController.xib */; };
+		28298C141AAAA9A400E18D34 /* Qfrb4QfrtbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28298C111AAAA9A400E18D34 /* Qfrb4QfrtbViewController.m */; };
 		282CA593182D428F00193AC9 /* ReportTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CA590182D428F00193AC9 /* ReportTableViewController.m */; };
 		282CA594182D428F00193AC9 /* ReportTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282CA592182D428F00193AC9 /* ReportTableViewController.xib */; };
 		282CA597182D437A00193AC9 /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 282CA595182D437900193AC9 /* CustomTableView.m */; };
@@ -412,6 +414,9 @@
 		28220D2A18C630C400DC875B /* home_page_background_960@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_page_background_960@2x.png"; sourceTree = "<group>"; };
 		2822F5C716B7CD1900F1E6AC /* use_soon_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = use_soon_press.png; path = images/use_soon_press.png; sourceTree = "<group>"; };
 		2822F5CD16B7D50800F1E6AC /* use_soon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "use_soon@2x.png"; path = "images/use_soon@2x.png"; sourceTree = "<group>"; };
+		28298C101AAAA9A400E18D34 /* Qfrb4QfrtbViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Qfrb4QfrtbViewController.xib; sourceTree = "<group>"; };
+		28298C111AAAA9A400E18D34 /* Qfrb4QfrtbViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Qfrb4QfrtbViewController.m; sourceTree = "<group>"; };
+		28298C121AAAA9A400E18D34 /* Qfrb4QfrtbViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Qfrb4QfrtbViewController.h; sourceTree = "<group>"; };
 		282CA590182D428F00193AC9 /* ReportTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportTableViewController.m; sourceTree = "<group>"; };
 		282CA591182D428F00193AC9 /* ReportTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportTableViewController.h; sourceTree = "<group>"; };
 		282CA592182D428F00193AC9 /* ReportTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportTableViewController.xib; sourceTree = "<group>"; };
@@ -1161,6 +1166,9 @@
 				2AE4D9DC17BDF8FB000101C6 /* SLoginViewController.h */,
 				2AE4D9DD17BDF8FB000101C6 /* SLoginViewController.m */,
 				2AE4D9DE17BDF8FB000101C6 /* SLoginViewController.xib */,
+				28298C101AAAA9A400E18D34 /* Qfrb4QfrtbViewController.xib */,
+				28298C111AAAA9A400E18D34 /* Qfrb4QfrtbViewController.m */,
+				28298C121AAAA9A400E18D34 /* Qfrb4QfrtbViewController.h */,
 				2885D0F0182A9328003B81F5 /* dayReportViewController.h */,
 				2885D0EF182A9328003B81F5 /* dayReportViewController.m */,
 				2885D0F4182A9480003B81F5 /* dayReportViewController.xib */,
@@ -1612,6 +1620,7 @@
 				2AFFE8A917D4305A00FA25BD /* tool_bar_item_scan_pressed.png in Resources */,
 				2AFFE8AA17D4305A00FA25BD /* tool_bar_item_search_normal.png in Resources */,
 				2AFFE8AB17D4305A00FA25BD /* tool_bar_item_search_pressed.png in Resources */,
+				28298C131AAAA9A400E18D34 /* Qfrb4QfrtbViewController.xib in Resources */,
 				28F6F03E18C8B96A00BEBF11 /* btn_home_zdgz.png in Resources */,
 				2AFFE8AC17D4305A00FA25BD /* tool_bar_item_setting_normal.png in Resources */,
 				2AFFE8AD17D4305A00FA25BD /* tool_bar_item_setting_pressed.png in Resources */,
@@ -1945,6 +1954,7 @@
 				28D72EFA184230070002792F /* HSYB4GJZB4OCS3GViewController.m in Sources */,
 				28D72EFF184234780002792F /* HSYB4GJZB4KDViewController.m in Sources */,
 				28D72F04184238480002792F /* HSYB4GJZB4GHViewController.m in Sources */,
+				28298C141AAAA9A400E18D34 /* Qfrb4QfrtbViewController.m in Sources */,
 				2898A3D718F2BD93008C773D /* GcztxxtjViewController.m in Sources */,
 				283C6372184B3993008349BB /* HSYB43GYWViewController.m in Sources */,
 				283C6377184B695F008349BB /* HSYB4KDYFZQKViewController.m in Sources */,
